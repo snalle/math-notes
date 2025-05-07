@@ -1,0 +1,39 @@
+\subsubsection*{Exc 1.5: What is the negation of each of these propositions?}
+\begin{enumerate}[label=(\alph*)]
+\item Mei has an MP3 player.
+\item There is no pollution in New Jersey.
+\item $2 + 1 = 3$
+\item The summer in Maine is hot and sunny.
+\end{enumerate}
+\subsubsection*{Solution:}
+\\
+\textbf{a):} Mei does not have a MP3 player.
+\\
+\textbf{b):} There is pollution in New Jersey.
+\\
+\textbf{c):} $2 + 1 \neq 3$
+\\
+\textbf{d):} The summer in Maine is not hot or not sunny
+\\ This last one is a bit more tricky, but if we say:
+$P = \text{The summer is hot}$ and 
+$Q = \text{The summer is sunny}$
+Then the original statement is a conjuction between $P$ and $Q$:
+\begin{equation*}
+P \land Q    
+\end{equation*}
+And now we have to make a negation on a conjuction:
+"\textbf{The negation of a conjunction is logically equivalent to the disjunction of the negation of the statements making up the conjunction. To negate an “and” statement, negate each part and change the “and” to “or”.} (DeMorgan's Laws)"
+\begin{equation*}
+\neg \left(P \land Q  \right) \equiv \neg P \lor \neg Q   \ \ , \ \ \text{(Logic notation)}
+\end{equation*}
+Can also be written as:
+\begin{equation*}
+\sim \left(P \land Q  \right) \equiv \overline{P} \lor \overline{Q} \ \ , \ \ \text{(Mix of older notation and Boolean Algebra)}
+\end{equation*}
+or: 
+\begin{equation*}
+\overline{P \land Q} \equiv \overline{P} \lor \overline{Q} \ \ , \ \ \text{(Full Boolean Algebra)}
+\end{equation*}
+or many other combinations (e.g. in Programming they use ! for negations)
+\\ The verbal negation is then: \textit{The summer in Maine is not hot or not sunny}
+
