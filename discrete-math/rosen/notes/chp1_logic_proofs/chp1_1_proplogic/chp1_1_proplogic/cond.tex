@@ -1,0 +1,231 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Conditional Statement (Implication)]
+Let $p$ and $q$ be propositions. The conditional statement  $p \rightarrow q$ is the proposition:  
+\begin{center}
+\textit{"if $p$, then $q$."}
+\end{center}
+The conditional statement $p \rightarrow q$ is false when $p$ is true and $q$ is false, and true otherwise. \\ \\
+In the conditional statement $p \rightarrow q$, $p$ is called the \textbf{hypothesis} (or antecedent or premise) and $q$ is called the \textbf{conclusion} (or consequence)
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The statement $p\rightarrow q$ is called a \textit{conditional statement} because $p\rightarrow q$  asserts that $q$ is true on the condition that $p$ holds. 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+A conditional statement is also called an \textbf{implication}.
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Conditional Statements (Implications)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Commonly Used In} \\
+\hline
+$p \rightarrow q$ & if $p$, then $q$ & Standard logic, discrete mathematics \\
+$p \Rightarrow q$ & $p$ implies $q$ & Proofs, math writing, theoretical CS \\
+$p \supset q$ & $p$ implies $q$ & Older logic notation, set-theoretic logic \\
+$if\ p,\ then\ q$ & verbal form & Natural language, programming explanations \\
+$q$ if $p$ & reverse phrasing & Common in math and spoken logic \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Ways to Express a Conditional Statement ($p \rightarrow q$)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{6.5cm}|p{6.5cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Alternate Wording} & \textbf{Meaning or Context} \\
+\hline
+If $p$, then $q$ & Standard form of a conditional \\
+$p$ implies $q$ & Common in mathematics and logic \\
+If $p$, $q$ & Shortened form, sometimes used in prose \\
+$p$ only if $q$ & Equivalent to: if not $q$, then not $p$ \\
+$p$ is sufficient for $q$ & $p$ guarantees $q$ (sufficient condition) \\
+A sufficient condition for $q$ is $p$ & Same as above \\
+$q$ if $p$ & Equivalent to “if $p$, then $q$” (reversed order) \\
+$q$ whenever $p$ & Conditional triggered by $p$ \\
+$q$ when $p$ & Same as “if $p$, then $q$” \\
+$q$ is necessary for $p$ & If not $q$, then not $p$ (i.e., $p \rightarrow q$) \\
+A necessary condition for $p$ is $q$ & Same as above \\
+$q$ follows from $p$ & Logical consequence \\
+$q$ unless $\neg p$ & Equivalent to “if $p$, then $q$” \\
+$q$ provided that $p$ & Again, equivalent to “if $p$, then $q$” \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Examples and Interpretations of Conditional Statements ($p \rightarrow q$)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{7cm}  % centered vertically + horizontally
+    |m{7.5cm}|}  % second column, vertically centered
+\hline
+\rowcolor{gray!20}
+\textbf{Statement (English)} & \textbf{Interpretation} \\
+\hline
+If I am elected, then I will lower taxes. & If the politician is elected, voters expect them to lower taxes. If not elected, there is no expectation either way. The only breach occurs if elected and fails to lower taxes — this is the case where $p$ is true and $q$ is false. \\
+\hline
+If you get 100\% on the final, then you will get an A. & Scoring 100\% should guarantee an A. If you don’t score 100\%, the outcome is uncertain. The only contradiction is if you get 100\% and don’t receive an A. \\
+\hline
+You can receive an A only if your score on the final is at least 90\%. & You must score at least 90\% to get an A. That is, receiving an A implies you scored $\geq 90\%$. This expresses a necessary condition: $A \rightarrow (\text{score} \geq 90)$ \\
+\hline
+If Maria learns discrete mathematics, then she will find a good job. &  This expresses a natural relationship: learning discrete math is seen as a path to employment. The implication is only false if she learns it and still does not find a job. Otherwise, it's considered true. \\
+\hline
+If it is sunny, then we will go to the beach. & This conditional is understood to mean that sunshine causes the beach trip. It is true unless it’s sunny and we don’t go — that’s the only logically false case. \\
+\hline
+If Juan has a smartphone, then $2 + 3 = 5$. &  This is true from the definition of a conditional statement, because its conclusion is true. (The truth
+value of the hypothesis does not matter then.) \\
+\hline
+If Juan has a smartphone, then $2 + 3 = 6$. & The conditional statement is true if Juan does not have a smartphone, even though $2 + 3 = 6$ is false\\
+\hline
+If $2 + 2 = 4$, then $x := x + 1$. & Because $2 + 2 = 4$ is true, the assignment statement $x := x + 1$ is executed. Hence, $x$
+has the value $0 + 1 = 1$ after this statement is encountered\\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Conditional Statement $p \rightarrow q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \rightarrow q$} \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & T \\
+F & F & T \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+A useful way to understand the truth value of a conditional statement is to think of an obligation
+or a contract. 
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 4]
+To remember that “\textit{$p$ only if $q$}” expresses the
+same thing as “\textit{if $p$, then $q$,}” note that “\textit{$p$ only if $q$}” says that p cannot be true when q is not true. \\ \\
+That is, the statement is false if $p$ is true, but $q$ is false. When $p$ is false, $q$ may be either true or
+false, because the statement says nothing about the truth value of $q$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 5]
+Be careful not to use “\textit{$q$ only if $p$}” to express $p\rightarrow q$ because this is incorrect. The word
+“\textbf{only}” plays an essential role here. To see this, note that the truth values of \textit{“$q$ only if $p$”} and $p \rightarrow q$ are different when $p$ and $q$ have different truth values
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 6]
+To see why “\textit{$q$ is necessary for $p$}”
+is equivalent to “\textit{if $p$, then $q$,}” observe that “\textit{$q$ is necessary for $p$}” means that $p$ cannot be true
+unless $q$ is true, or that if $q$ is false, then $p$ is false. This is the same as saying that if $p$ is true, then $q$ is true.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 7]
+To see why “\textit{$p$ is sufficient for $q$}” is equivalent to “\textit{if $p$, then $q$,}” note that “\textit{$p$ is
+sufficient for $q$}” means if $p$ is true, it must be the case that $q$ is also true. This is the same as saying that if $p$ is true, then $q$ is also true.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 8]
+To remember that “\textit{$q$ unless $\neg p$}” expresses the same conditional statement as “\textit{if $p$, then $q$,}” note that “\textit{$q$ unless $\neg p$}” means that if $\neg p$ is false, then $q$ must be true. That is, the statement
+“\textit{$q$ unless $\neg p$}” is false when $p$ is true but $q$ is false, but it is true otherwise. Consequently,
+“\textit{$q$ unless $\neg p$}” and $p \rightarrow q$ always have the same truth value.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 9]
+We would not use
+these two conditional statements: \\ "\textit{If Juan has a smartphone, then $2 + 3 = 5$}" or \\ \textit{"If Juan has a smartphone, then $2 + 3 = 6$"} \\ in natural language (except perhaps in sarcasm), because
+there is no relationship between the hypothesis and the conclusion in either statement
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 10]
+In mathematical reasoning, we consider conditional statements of a more general sort than we use in English. The mathematical concept of a conditional statement is independent of a cause-and-effect
+relationship between hypothesis and conclusion. Our definition of a conditional statement
+specifies its truth values; it is not based on English usage. Propositional language is an artificial
+language; we only parallel English usage to make it easy to use and remember.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 11]
+The if-then construction used in many programming languages is different from that
+used in logic. Most programming languages contain statements such as \textbf{if} $p$ \textbf{then} $S$, where
+$p$ is a proposition and $S$ is a program segment (one or more statements to be executed). \\
+(Although this looks as if it might be a conditional statement, $S$ is not a proposition, but
+rather is a set of executable instructions.) When execution of a program encounters such
+a statement, $S$ is executed if $p$ is true, but $S$ is not executed if $p$ is false
+\end{tcolorbox}
+
+\subsection*{Converse, Contrapositive, and Inverse (pg. 9)}
+
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definitions]
+Given a conditional statement $p \rightarrow q$, we define:
+\begin{center}
+\textbf{Converse}: $q \rightarrow p$ 
+\end{center}
+\begin{center}
+\textbf{Inverse}: $\neg p \rightarrow \neg q$
+\end{center}
+\begin{center}
+\textbf{Contrapositive}: $\neg q \rightarrow \neg p$
+\end{center}
+Only the contrapositive is logically equivalent to the original conditional statement.
+\end{tcolorbox}
+
+\vspace{5pt}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Values of Conditional Forms}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|c|c|c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \rightarrow q$} & \textbf{$q \rightarrow p$ (Converse)} & \textbf{$\neg p \rightarrow \neg q$ (Inverse)} & \textbf{$\neg q \rightarrow \neg p$ (Contrapositive)} \\
+\hline
+T & T & T & T & T & T \\
+T & F & F & T & T & F \\
+F & T & T & F & F & T \\
+F & F & T & T & T & T \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[title=Example: Rewriting the Conditional Statement]
+\textbf{Original Statement:} “The home team wins whenever it is raining.”  
+This translates to: 
+\begin{center}
+\textit{If it is raining, then the home team wins.} ($p \rightarrow q$)    
+\end{center}
+- \textbf{Converse:}  
+\begin{center}
+If the home team wins, then it is raining. ($q \rightarrow p$)     
+\end{center}
+- \textbf{Inverse:} 
+\begin{center}
+If it is not raining, then the home team does not win. ($\neg p \rightarrow \neg q$)      
+\end{center}
+- \textbf{Contrapositive:} 
+\begin{center}
+If the home team does not win, then it is not raining. ($\neg q \rightarrow \neg p$)    
+\end{center}
+Only the contrapositive is logically equivalent to the original.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+A conditional statement and its contrapositive always have the same truth value — they are logically equivalent  
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+The converse and inverse are equivalent to each other, but not to the original statement.   
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+Assuming the converse is equivalent to the original is a common logical fallacy.   
+\end{tcolorbox}
+
+
+
+
+
+
+
+\newpage
+

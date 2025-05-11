@@ -1,0 +1,59 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Disjunction]
+Let $p$ and $q$ be propositions. The disjunction of $p$ and $q$, denoted by $p \lor q$, is the proposition:
+\begin{center}
+\textit{"$p$ or $q$."}
+\end{center}
+The disjunction $p \lor q$ is false when both $p$ and $q$ are false and is true otherwise.
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Disjunction and Their Contexts}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Commonly Used In} \\
+\hline
+$p \lor q$ & $p$ or $q$ & Mathematical logic, discrete math, philosophy \\
+$p + q$ & $p$ or $q$ & Boolean algebra (addition-like behavior) \\
+$p \mid q$ & $p$ or $q$ & Sometimes used in older logic notation or vertical bar systems \\
+$p \texttt{|} q$ & $p$ or $q$ & Programming (e.g., Python, JavaScript: bitwise OR) \\
+$p \texttt{||} q$ & $p$ or $q$ & Programming (C, Java, etc.: logical OR) \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Examples of Propositions and Their Disjunctions}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{4.5cm}|p{4.5cm}|p{6cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Proposition $p$} & \textbf{Proposition $q$} & \textbf{Disjunction $p \lor q$ (Plain English)} \\
+\hline
+A student has taken calculus. & A student has taken introductory computer science. & A student who has taken calculus or introductory computer science can take this class. \\
+Rebecca’s PC has at least 16 GB of free hard disk space. & Rebecca’s PC’s processor runs faster than 1 GHz. & Rebecca’s PC has at least 16 GB free hard disk space, or its processor runs faster than 1 GHz. \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Disjunction $p \lor q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \lor q$} \\
+\hline
+T & T & T \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{table}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1 ]
+The disjunction $p \lor q$ is an inclusive “or,” meaning it is true when either $p$, $q$, or both are true. It is only false when both are false.
+\end{tcolorbox}

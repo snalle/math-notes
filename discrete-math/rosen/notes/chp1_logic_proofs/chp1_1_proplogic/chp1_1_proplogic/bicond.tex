@@ -1,0 +1,127 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Biconditional Statement]
+Let $p$ and $q$ be propositions. The biconditional statement  $p \leftrightarrow q$ is the proposition:  
+\begin{center}
+\textit{"$p$ if and only if $q$.”"}
+\end{center}
+The biconditional statement $p \leftrightarrow q$ is true when $p$ and $q$ have the same truth values,
+and is false otherwise.  \\ \\
+Biconditional statements are also called bi-implications.
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Biconditional Statements}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Used In} \\
+\hline
+$p \leftrightarrow q$ & $p$ if and only if $q$ & Logic, mathematics \\
+$p \Leftrightarrow q$ & $p$ is logically equivalent to $q$ & Formal proofs, equivalences \\
+$\text{iff}(p, q)$ or "iff" & iff = if and only if & Mathematical shorthand \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Ways to Express a Biconditional Statement $p \leftrightarrow q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{5.5cm}|p{6.5cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Expression} & \textbf{Notes} \\
+\hline
+"$p$ if and only if $q$" & Standard form in logic and math \\
+"$p$ is necessary and sufficient for $q$" & Emphasizes that each implies the other \\
+"If $p$ then $q$, and conversely" & States both directions explicitly \\
+"$p$ iff $q$" & Abbreviation: “if and only if” \\
+"$p$ exactly when $q$" & Informal but equivalent phrasing \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Biconditional $p \leftrightarrow q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \leftrightarrow q$} \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & T \\
+\hline
+\end{tabular}
+\end{table}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The statement $p \leftrightarrow q$ is true when both the conditional statements:
+\begin{center}
+$p \rightarrow q$    
+\end{center}
+\begin{center}
+$q \rightarrow p$    
+\end{center}
+are true and is false otherwise
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+That is why we use the words “\textit{if and only if}” to express this logical connective and why it is symbolically written by
+combining the symbols $\rightarrow$ and $\leftarrow$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+Note that $p\leftrightarrow q$ has exactly the same truth value as 
+\begin{center}
+$(p\rightarrow q) \land (q \rightarrow p)$    
+\end{center}{}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example of biconditional statement]
+\textbf{Statements:}  
+\begin{center}
+$p:$ \textit{"You can take the flight"} and   $q:$ \textit{"You buy a ticket"}
+\end{center}
+\textbf{Biconditional statement:}
+\begin{center}
+You can take the flight if and only if you buy a ticket ($p \leftrightarrow q$)     
+\end{center}
+\textbf{When true?}
+\begin{center}
+This statement is \textbf{true} if $p$ and $q$ are \textit{either both true} or \textit{both false}, that is, if you buy a ticket and can take the flight or if you do not buy a ticket and you cannot take the flight     
+\end{center}
+\textbf{When false?} 
+\begin{center}
+It is \textbf{false} when
+$p$ and $q$ have \textit{opposite truth values}, that is, when you do not buy a ticket, but you can take the flight (such as when you get a free trip) and when you buy a ticket but you cannot take the flight
+(such as when the airline bumps you).   
+\end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 4]
+You should be aware that biconditionals are not always explicit in natural language. In particular, the “\textit{if and only if}” construction used in biconditionals is rarely used in common language. \\ \\ Instead, biconditionals are often expressed
+using an “\textit{if, then}” or an “\textit{only if}” construction. The other part of the “\textit{if and only if}” is implicit.
+That is, the converse is implied, but not stated.
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example of biconditional statement 2]
+\textbf{Statement:}  
+\begin{center}
+\textit{If you finish your meal, then you can have dessert}
+\end{center}
+\textbf{Really meant:}
+\begin{center}
+\textit{You can have
+dessert if and only if you finish your meal}  
+\end{center}
+\textbf{Logically equivalent to:}
+\begin{center}
+\textit{If you finish your meal, then you can have dessert} \\
+\textit{You can have dessert
+only if you finish your meal}
+\end{center}  
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 5]
+Because of this imprecision in natural language, we need to
+make an assumption whether a conditional statement in natural language implicitly includes its
+converse. \\ Because precision is essential in mathematics and in logic, we will always distinguish between the conditional statement $p\rightarrow q$ and the biconditional statement $p\leftrightarrow q$.
+\end{tcolorbox}

@@ -1,0 +1,68 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Conjunction]
+Let $p$ and $q$ be propositions. The conjunction of $p$ and $q$, denoted by $p \land q$, is the proposition:  
+\begin{center}
+\textit{"$p$ and $q$."}
+\end{center}
+The conjunction $p \land q$ is true when both $p$ and $q$ are true; it is false otherwise.
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Conjunction and Their Contexts}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Commonly Used In} \\
+\hline
+$p \land q$ & $p$ and $q$ & Mathematical logic, discrete math, philosophy \\
+$p \cdot q$ & $p$ and $q$ & Boolean algebra (uses multiplication symbol) \\
+$pq$ & $p$ and $q$ & Boolean expressions (abbreviated multiplication) \\
+$p * q$ & $p$ and $q$ & Some algebraic logic, circuit simplification tools \\
+$p \&\& q$ & $p$ and $q$ & Programming languages (C, Java, JavaScript, Python) \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Examples of Propositions and Their Conjunctions}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{4.5cm}|p{4.5cm}|p{6cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Proposition $p$} & \textbf{Proposition $q$} & \textbf{Conjunction $p \land q$ (Plain English)} \\
+\hline
+It is raining. & It is cold. & It is raining and it is cold. \\
+5 is an odd number. & 2 is an even number. & 5 is an odd number and 2 is an even number. \\
+\hline
+Rebecca’s PC has more than 16 GB free hard disk space & The processor in Rebecca’s PC runs faster than 1 GHz. & Rebecca’s PC has more than 16 GB free hard disk space, and its processor runs faster than 1 GHz. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Conjunction $p \land q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \land q$} \\
+\hline
+T & T & T \\
+T & F & F \\
+F & T & F \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The conjunction $p \land q$ is true only when both $p$ and $q$ are true. In all other cases, the conjunction is false.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+Note that in logic the word “\textit{but}” sometimes is used instead of “\textit{and}” in a conjunction. For
+example, the statement “\textit{The sun is shining, but it is raining}” is another way of saying “\textit{The sun
+is shining and it is raining.}”
+\end{tcolorbox}
+
+

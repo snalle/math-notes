@@ -1,0 +1,120 @@
+\begin{itemize}
+    \item \textbf{Compound propositions} We can use these connectives to build up complicated compound propositions involving any number of propositional
+variables
+    \item We can use truth tables to determine the truth values of these compound propositions
+\end{itemize}
+\begin{tcolorbox}[title=Example of compound propositions]
+\textbf{Compound proposition:}  
+\begin{center}
+$(p \lor \neg q ) \rightarrow (p \land q)$
+\end{center}
+\textbf{Translated into and read as}
+\begin{center}
+\textit{If either $p$ is true or $q$ is not true, then both $p$ and $q$ are true.}
+\end{center}
+\textbf{How to solve (through truth table)?} \\
+Because this truth table involves two propositional variables $p$ and $q$, there are four
+rows in this truth table, one for each of the pairs of truth values TT, TF, FT, and FF \\
+\textbf{Coloumn 1 and 2:} Used for the truth values of $p$ and $q$, respectively. \\
+\textbf{Coloumn 3:} We find the truth value of $\neg q$ \\
+\textbf{Coloum 4:} We find the truth value of $p \lor \neg q$ \\
+\textbf{Coloumn 5:} We find the truth value of $p \land q$ . \\
+\textbf{Coloumn 6:} We find the truth value of the original compound proposition $(p \lor \neg q ) \rightarrow (p \land q)$
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for $(p \lor \neg q) \rightarrow (p \land q)$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1pt}c|c|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $\neg q$ & $p \lor \neg q$ & $p \land q$ & $(p \lor \neg q) \rightarrow (p \land q)$ \\
+\hline
+T & T & F & T & T & T \\
+T & F & T & T & F & F \\
+F & T & F & F & F & T \\
+F & F & T & T & F & F \\
+\hline
+\end{tabular}
+\end{table}
+\subsection*{Precedence of Logical Operators (pg. 11)}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+We will generally use parentheses to specify the order in which logical operators
+in a compound proposition are to be applied. 
+\\ \\ For instance:
+\begin{center}
+$(p \lor q) \land (\neg r)$    
+\end{center}
+is the conjunction of $p \lor q$ and $\neg r$.
+\\ \\
+\textbf{Translation:}
+\begin{center}
+\textit{$p$ or $q$ and not $r$} (logic) \\
+\textit{Either $p$ is true or $q$ is true, and $r$ is not true} (plain English)
+\end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+However, to reduce the number of parentheses, we specify that the negation
+operator is applied before all other logical operators.
+\\ \\
+\textbf{Example:}
+\begin{center}
+$\neg p \land q$ can be seen as $(\neg p) \land q$    
+\end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+Another general rule of precedence is that the conjunction operator takes precedence over
+the disjunction operator
+\\ \\
+\textbf{Example:}
+\begin{center}
+$p \lor q \land r$ means $p \lor (q \land r)$ \\ 
+$p \land q \lor r$ means $(p \land q) \lor r$
+\end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 4]
+Finally, it is an accepted rule that the conditional and biconditional operators, $\rightarrow$ and $\leftrightarrow$,
+have lower precedence than the conjunction and disjunction operators
+\\ \\
+\textbf{Example:}
+\begin{center}
+$p\rightarrow q \lor r $ means $p\rightarrow (q \lor r) $  \\ 
+$p \lor q \rightarrow r$ means $(p \lor q)\rightarrow r$
+\end{center}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 5]
+We will use parentheses when the order of the conditional operator and biconditional
+operator is at issue, although the conditional operator has precedence over the
+biconditional operator
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Precedence of Logical Operators (from highest to lowest)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Precedence} & \textbf{Symbol} & \textbf{Operator Name} \\
+\hline
+1 (highest) & $\neg$ & Negation (Not) \\
+2 & $\land$ & Conjunction (And) \\
+3 & $\lor$ & Disjunction (Or) \\
+4 & $\oplus$ & Exclusive Or (XOR) \\
+5 & $\rightarrow$ & Conditional (Implication) \\
+6 & $\leftrightarrow$ & Biconditional (If and only if) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Negation]
+Let $p$ be a proposition. The negation of $p$, denoted by $\neg p$ (also written as $\overline{p}$), is the statement:  
+\begin{center}
+\textit{"It is not the case that $p$."}
+\end{center}
+The truth value of $\neg p$ is the opposite of the truth value of $p$.
+\end{tcolorbox}
+\vspace{5pt}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Negation and Their Contexts}}
+\rowcolors{2}{gray!10}{white} % alternate every 2nd row
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Commonly Used In} \\
+\hline
+$\neg p$       & not $p$            & Mathematical logic, philosophy, discrete math \\
+$\overline{p}$ & not $p$            & Boolean algebra, electrical engineering \\
+$\sim p$       & not $p$            & Older logic texts, set theory \\
+$-p$           & not $p$ (context-dependent) & Some logic systems (rare), can cause ambiguity \\
+$p'$           & $p$ prime / not $p$ & Boolean functions, circuit notation \\
+$Np$           & not $p$            & Some formal logic systems (rare) \\
+!$p$           & not $p$            & Programming languages (C, Python, JavaScript) \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Examples of Propositions and Their Negations}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{5.5cm}|p{5.5cm}|p{5.5cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Original Proposition} & \textbf{Formal Logical Negation} & \textbf{Natural English Negation} \\
+\hline
+Michael’s PC runs Linux. & It is not the case that Michael’s PC runs Linux. & Michael’s PC does not run Linux. \\
+The number 5 is even. & It is not the case that the number 5 is even. & The number 5 is odd. \\
+2 + 2 = 4. & It is not the case that 2 + 2 = 4. & 2 + 2 does not equal 4. \\
+Cats are mammals. & It is not the case that cats are mammals. & Cats are not mammals. \\
+\hline
+Vandana’s smartphone has at least 32 GB of memory & It is not the case that Vandana’s smartphone has at least 32 GB of memory. & Vandana’s smartphone has less than 32 GB of memory. \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Negation of a Proposition}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$\neg p$} \\
+\hline
+T & F \\
+F & T \\
+\hline
+\end{tabular}
+\end{table}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The truth value of $\neg p$ is always the opposite of the truth value of $p$. If $p$ is true, then $\neg p$ is false; if $p$ is false, then $\neg p$ is true.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+The negation of a proposition can also be considered the result of the operation of the
+negation operator on a proposition. The negation operator constructs a new proposition from
+a single existing proposition.
+\end{tcolorbox}
+
+

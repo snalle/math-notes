@@ -1,0 +1,152 @@
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} A \textbf{bit} is a symbol with two possible values, namely,
+0 (zero) and 1 (one).
+  }
+}
+\end{center}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+Computers represent information using bits. \\ \\
+This meaning of the word bit comes from binary digit, because zeros and
+ones are the digits used in binary representations of numbers
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+A bit can be used to represent a truth value, because
+there are two truth values, namely, true and false. \\ As is customarily done, we will use a 1 bit
+to represent true and a 0 bit to represent false. That is, 1 represents T (true), 0 represents F
+(false).
+\end{tcolorbox}
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} A variable is called a \textbf{Boolean variabl}e if its value is either true or false.
+  }
+}
+\end{center}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+Consequently, a Boolean variable can be represented using a bit.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 4]
+Computer bit operations correspond to the logical connectives. By replacing true by a one
+and false by a zero in the truth tables for the operators: $\land , \lor$ and $\oplus$.
+\\ \\ 
+We will also use the notation \textbf{OR}, \textbf{AND}, and \textbf{XOR} for the operators as is done in various programming languages
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\begin{minipage}{0.48\linewidth}
+\centering
+\caption*{\textbf{Bitwise Table (0/1)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1pt}c|c|c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $p \lor q$ & $p \land q$ & $p \oplus q$ \\
+\hline
+0 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 1 \\
+1 & 0 & 1 & 0 & 1 \\
+1 & 1 & 1 & 1 & 0 \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+\centering
+\caption*{\textbf{Truth Table (T/F)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1pt}c|c|c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $p \lor q$ & $p \land q$ & $p \oplus q$ \\
+\hline
+F & F & F & F & F \\
+F & T & T & F & T \\
+T & F & T & F & T \\
+T & T & T & T & F \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} A \textbf{bit string} is a sequence of zero or more bits. The length of this string is the number of bits
+in the string.
+  }
+}
+\end{center}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 5]
+Information is often represented using bit strings, which are lists of zeros and ones. \\ When
+this is done, operations on the bit strings can be used to manipulate this information.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 6]
+We define the \textbf{bitwise OR}, \textbf{bitwise AND}, and \textbf{bitwise XOR} of two strings of the same length to be the strings that have as their bits the OR, AND, and XOR of the corresponding bits in the two strings, respectively
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example of bitwise operations]
+Find the \textbf{bitwise OR}, \textbf{bitwise AND}, and b\textbf{itwise XOR} of the bit strings
+\begin{center}
+01 1011 0110 and 
+\\ 11 0001 1101
+\end{center}
+(Here, and throughout this book, bit strings will be split into blocks of four bits
+to make them easier to read.)
+\\ \\
+\textbf{\underline{Solution}:} \\
+The bitwise OR, bitwise AND, and bitwise XOR of these strings are obtained by taking
+the OR, AND, and XOR of the corresponding bits, respectively \\ \\
+\textbf{Bitwise OR:} \\
+To compute the \textbf{bitwise OR}, we compare each corresponding pair of bits from A and B.  
+The OR operation results in 1 if \textit{either} of the bits is 1, and 0 only if both are 0.
+\[
+\begin{array}{c c c c c c c c c c c c c}
+A & = & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 \\
+B & = & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+\hline
+A \text{ OR } B & = & 1 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 1 & 1
+\end{array}
+\]
+\textbf{Bitwise AND:} \\
+To compute the \textbf{bitwise AND}, we compare each corresponding pair of bits from A and B.  
+The AND operation results in 1 only if \textit{both} bits are 1; otherwise, it is 0.
+\[
+\begin{array}{c c c c c c c c c c c c c}
+A & = & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 \\
+B & = & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+\hline
+A \text{ AND } B & = & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 0 & 0
+\end{array}
+\]
+\textbf{Bitwise XOR:} \\
+To compute the \textbf{bitwise XOR}, we compare each corresponding pair of bits from A and B.  
+The XOR operation results in 1 if the bits are \textit{different}, and 0 if they are the same.
+\[
+\begin{array}{c c c c c c c c c c c c c}
+A & = & 0 & 1 & 1 & 0 & 1 & 1 & 0 & 1 & 1 & 0 \\
+B & = & 1 & 1 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+\hline
+A \text{ XOR } B & = & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 1
+\end{array}
+\]
+\textbf{\underline{Full solution}:}
+\begin{center}
+\begin{tabular}{>{\bfseries}r l}
+Bit String A:   & 01\ 1011\ 0110 \\
+Bit String B:   & 11\ 0001\ 1101 \\
+\hline
+Bitwise OR:     & 11\ 1011\ 1111 \\
+Bitwise AND:    & 01\ 0001\ 0100 \\
+Bitwise XOR:    & 10\ 1010\ 1011 \\
+\end{tabular}
+\end{center}
+
+
+
+
+
+\end{tcolorbox}
+
+
+
+

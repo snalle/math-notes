@@ -1,0 +1,64 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Exclusive Or (XOR)]
+Let $p$ and $q$ be propositions. The exclusive or of $p$ and $q$, denoted by $p \oplus q$, is the proposition:  
+\begin{center}
+\textit{"$p$ or $q$, but not both."}
+\end{center}
+The exclusive or $p \oplus q$ is true when exactly one of $p$ or $q$ is true, and false otherwise.
+\end{tcolorbox}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Common Notations for Exclusive Or (XOR) and Their Contexts}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|l|l|}
+\hline
+\rowcolor{gray!20}
+\textbf{Notation} & \textbf{Read as} & \textbf{Commonly Used In} \\
+\hline
+$p \oplus q$ & $p$ XOR $q$ & Mathematical logic, discrete math, CS theory \\
+$p \veebar q$ & $p$ exclusive or $q$ & Set theory, logic (less common) \\
+$p \neq q$ & $p$ not equal to $q$ & Logic circuits (when $p$, $q$ are Boolean) \\
+$p \texttt{\^{} } q$ & $p$ XOR $q$ & Programming (Python, C++, JavaScript — bitwise XOR) \\
+$\texttt{xor}(p, q)$ & XOR function of $p$ and $q$ & Pseudocode, some programming languages and logic textbooks \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Examples of Propositions and Their Exclusive Or (XOR)}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{4.5cm}|p{4.5cm}|p{6cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Proposition $p$} & \textbf{Proposition $q$} & \textbf{Exclusive Or $p \oplus q$ (Plain English)} \\
+\hline
+A student can have a salad with dinner. & A student can have soup with dinner. & A student can have soup or salad, but not both, with dinner. \\
+I will use all my savings to travel to Europe. & I will use all my savings to buy an electric car. & I will use all my savings to travel to Europe or to buy an electric car, but not both. \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[h!]
+\centering
+\caption*{\textbf{Truth Table for the Exclusive Or $p \oplus q$}}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|}
+\hline
+\rowcolor{gray!20}
+\textbf{$p$} & \textbf{$q$} & \textbf{$p \oplus q$} \\
+\hline
+T & T & F \\
+T & F & T \\
+F & T & T \\
+F & F & F \\
+\hline
+\end{tabular}
+\end{table}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The exclusive or $p \oplus q$ is true only when exactly one of $p$ or $q$ is true. It is false when both are true or both are false.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+In Boolean logic and programming, XOR is often used to represent binary decisions where two conditions are mutually exclusive.
+\end{tcolorbox}
+
+
