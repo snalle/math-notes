@@ -1,0 +1,111 @@
+\begin{tcolorbox}[title=Example 1: Express a specification using logical connectives.]
+\textbf{Specification:}  
+\begin{center}
+\textit{"The automated reply cannot be sent when the file system is full"}
+\end{center}
+\textbf{Let:}
+\begin{itemize}
+  \item $p$: The automated reply can be sent
+  \item $q$: The file system is full
+\end{itemize}
+Then we can express the negation of $p$ as $\neg p:$
+\begin{center}
+\textit{"It is not the case that the automated reply can be sent"} \\ or simply: \textit{"The automated reply cannot be sent"}
+\end{center}{}
+
+\vspace{0.5em}
+
+\textbf{Translation (as conditional statement):}
+\[
+q \rightarrow \neg p
+\]
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+System specifications should be \textbf{consistent}, that is, they should not contain conflicting requirements
+that could be used to derive a contradiction. \\ When specifications are not consistent,
+there would be no way to develop a system that satisfies all specifications.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 2: Determine Consistency of System Specifications]
+\textbf{Consider the following specifications:}
+\begin{enumerate}
+    \item \textit{The diagnostic message is stored in the buffer or it is retransmitted.}
+    \item \textit{The diagnostic message is not stored in the buffer.}
+    \item \textit{If the diagnostic message is stored in the buffer, then it is retransmitted.}
+\end{enumerate}
+
+\textbf{Let:}
+\begin{itemize}
+  \item $p$: The diagnostic message is stored in the buffer
+  \item $q$: The diagnostic message is retransmitted
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Translations:}
+\begin{enumerate}
+    \item $p \lor q$
+    \item $\neg p$
+    \item $p \rightarrow q$
+\end{enumerate}
+
+\textbf{Truth Assignment and Evaluation:}
+
+Assume: \( p = \text{F},\ q = \text{T} \)
+
+\begin{itemize}
+    \item (1) \( p \lor q = \text{F} \lor \text{T} = \text{T} \)
+    \item (2) \( \neg p = \neg \text{F} = \text{T} \)
+    \item (3) \( p \rightarrow q = \text{F} \rightarrow \text{T} = \text{T} \) (a conditional with false hypothesis is always true)
+\end{itemize}
+
+\textbf{Conclusion:}
+
+Under the assignment \( p = \text{F},\ q = \text{T} \), all three specifications evaluate to true.  \\
+\textbf{Therefore, the system specifications are consistent.}
+
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example 3: Determine Consistency of System Specifications (2)]
+\textbf{Consider the following specifications:}
+\begin{enumerate}
+    \item \textit{The diagnostic message is stored in the buffer or it is retransmitted.}
+    \item \textit{The diagnostic message is not stored in the buffer.}
+    \item \textit{If the diagnostic message is stored in the buffer, then it is retransmitted.}
+    \item \textit{The diagnostic message is not retransmitted.}
+\end{enumerate}
+
+\textbf{Let:}
+\begin{itemize}
+  \item $p$: The diagnostic message is stored in the buffer
+  \item $q$: The diagnostic message is retransmitted
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Translations:}
+\begin{enumerate}
+    \item $p \lor q$
+    \item $\neg p$
+    \item $p \rightarrow q$
+    \item $\neg q$
+\end{enumerate}
+
+\textbf{Truth Assignment and Evaluation:}
+
+Assume: \( p = \text{F},\ q = \text{T} \)
+
+\begin{itemize}
+    \item (1) \( p \lor q = \text{F} \lor \text{T} = \text{T} \)
+    \item (2) \( \neg p = \neg \text{F} = \text{T} \)
+    \item (3) \( p \rightarrow q = \text{F} \rightarrow \text{T} = \text{T} \) (a conditional with a false hypothesis is always true)
+    \item (4) \( \neg q = \neg \text{T} = \text{F} \) \textbf{← Contradiction!}
+\end{itemize}
+
+\textbf{Conclusion:}
+
+Under the truth assignment \( p = \text{F},\ q = \text{T} \), the first three specifications are satisfied.  
+However, the fourth specification (\( \neg q \)) is false.  
+
+\textbf{Therefore, the system specifications are inconsistent.}
+\end{tcolorbox}
+

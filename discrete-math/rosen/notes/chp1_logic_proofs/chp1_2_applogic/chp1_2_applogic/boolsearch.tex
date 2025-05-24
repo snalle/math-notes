@@ -1,0 +1,185 @@
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} \textbf{Boolean searching} refers to a search technique that uses tools called operators and modifiers to limit, widen, and refine your search results
+  }
+}
+\end{center}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+In Boolean searches, the connective AND is used to match records that contain both of
+two search terms, the connective OR is used to match one or both of two search terms, and the
+connective NOT (sometimes written as AND NOT ) is used to exclude a particular search term
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+\textbf{Web Page Searching}: 
+ Most Web search engines support Boolean searching techniques, which
+is useful for finding Web pages about particular subjects
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example 1: Boolean Searching Using Logical Operators]
+\textbf{Statement:}  
+\begin{center}
+\textit{You want to search for Web pages about universities in New Mexico.}
+\end{center}
+
+\textbf{Strategy:}  
+We can use Boolean logic operators like AND, OR, and NOT to construct search expressions that include only the pages we want. We'll analyze what happens with different Boolean formulations.
+
+\textbf{Let:}
+\begin{itemize}
+    \item $N$: The page contains the word "NEW"
+    \item $M$: The page contains the word "MEXICO"
+    \item $U$: The page contains the word "UNIVERSITIES"
+\end{itemize}
+\textbf{Boolean Search:}
+\[
+N \land M \land U \ \ \ (\text{Logic operators})
+\]
+\[
+\text{NEW AND MEXICO AND UNIVERSITIES}
+\]
+
+This query returns all pages that contain the words "NEW", "MEXICO", and "UNIVERSITIES".
+\\
+\textbf{Observation:}  
+This will include:
+\begin{itemize}
+    \item Relevant pages about universities in New Mexico (desired)
+    \item Irrelevant pages such as ones about "new universities in Mexico" (not desired)
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Improved Search Strategy:}  
+To reduce irrelevant results, use quotation marks to group the phrase "NEW MEXICO" as a single unit:
+
+\[
+\texttt{"NEW MEXICO"} \land U \ \ \text{(Logic operators)}
+\]
+\[
+\text{“NEW
+MEXICO” AND UNIVERSITIES.}
+\]
+
+This ensures the search engine treats "NEW MEXICO" as a proper phrase and reduces matches like “new universities in Mexico”.
+
+\textbf{Conclusion:}  
+Boolean search logic mimics propositional logic. Using grouping (e.g., quotation marks) and appropriate connectives improves search precision.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 2: Boolean Searching with OR and AND Precedence]
+\textbf{Statement:}  
+\begin{center}
+\textit{You want to search for Web pages about universities in either New Mexico or Arizona.}
+\end{center}
+
+\textbf{Strategy:}  
+We use Boolean logic to capture the intent: pages that mention "universities" and either:
+- both "NEW" and "MEXICO", or
+- "ARIZONA".
+\\ \\
+\textbf{Let:}
+\begin{itemize}\setlength\itemsep{0em}
+    \item $N$: The page contains the word "NEW"
+    \item $M$: The page contains the word "MEXICO"
+    \item $A$: The page contains the word "ARIZONA"
+    \item $U$: The page contains the word "UNIVERSITIES"
+\end{itemize}
+
+\textbf{Boolean Search:}
+\[
+((N \land M) \lor A) \land U
+\]
+\[
+\texttt{(NEW AND MEXICO OR ARIZONA) AND UNIVERSITIES}
+\]
+
+\textbf{Note on Precedence:}  
+In Boolean logic (and in most search engines), the AND operator has higher precedence than OR.  
+So this is interpreted as:
+\[
+((\text{NEW AND MEXICO}) \text{ OR ARIZONA}) \text{ AND UNIVERSITIES}
+\]
+
+\textbf{Observation:}  
+This query matches:
+\begin{itemize}\setlength\itemsep{0em}
+    \item Pages about universities in New Mexico (contain NEW, MEXICO, and UNIVERSITIES)
+    \item Pages about universities in Arizona (contain ARIZONA and UNIVERSITIES)
+    \item But also possibly irrelevant pages such as:
+    \begin{itemize}\setlength\itemsep{0em}
+        \item Pages with NEW and MEXICO but not universities
+        \item Pages about Arizona universities not specifically comparing them with New Mexico
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Improved Search Strategy:}  
+Use grouping with parentheses or quotation marks to better control matching, especially when using search engines like Google:
+
+\[
+\texttt{"NEW MEXICO" OR ARIZONA AND UNIVERSITIES}
+\]
+
+This still depends on how the search engine parses precedence. Some engines may interpret it as:
+\[
+\texttt{"NEW MEXICO"} \lor (\texttt{ARIZONA} \land \texttt{UNIVERSITIES})
+\]
+which may not be what you want.
+\\ \\
+\textbf{Conclusion:}  
+Operator precedence matters in Boolean search. To refine results, group expressions using parentheses or quotes, and be aware that not all engines use the same precedence rules.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 3: Boolean Searching Using NOT (Exclusion)]
+\textbf{Statement:}  
+\begin{center}
+\textit{You want to find Web pages about universities in Mexico, but exclude those about New Mexico.}
+\end{center}
+
+\textbf{Strategy:}  
+A naive search for \texttt{MEXICO AND UNIVERSITIES} will match both:
+\begin{itemize}\setlength\itemsep{0em}
+    \item Pages about universities in Mexico (desired)
+    \item Pages about universities in New Mexico (undesired)
+\end{itemize}
+
+To avoid including pages that mention “NEW”, we use the \textbf{NOT} operator to exclude them.
+
+\vspace{0.5em}
+
+\textbf{Let:}
+\begin{itemize}\setlength\itemsep{0em}
+    \item $M$: The page contains the word "MEXICO"
+    \item $U$: The page contains the word "UNIVERSITIES"
+    \item $N$: The page contains the word "NEW"
+\end{itemize}
+
+\textbf{Boolean Search:}
+\[
+(M \land U) \land \neg N
+\]
+\[
+\texttt{(MEXICO AND UNIVERSITIES) NOT NEW}
+\]
+
+\textbf{Observation:}  
+This search will include:
+\begin{itemize}\setlength\itemsep{0em}
+    \item Pages that mention both “MEXICO” and “UNIVERSITIES”
+    \item But \textbf{exclude} any pages that also contain the word “NEW” — removing false positives related to "New Mexico"
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Search Engine Note:}  
+Many engines like Google do not use the word \texttt{NOT}, but instead use the minus sign (\texttt{-}) to indicate exclusion.
+\\ \\
+\textbf{Google-style equivalent:}
+\[
+\texttt{MEXICO UNIVERSITIES -NEW}
+\]
+
+\textbf{Conclusion:}  
+The NOT operator (or \texttt{-} in practice) is useful in Boolean searching for filtering out results that include unwanted keywords. When searching for content that overlaps with similar terms, this exclusion strategy improves result relevance.
+\end{tcolorbox}

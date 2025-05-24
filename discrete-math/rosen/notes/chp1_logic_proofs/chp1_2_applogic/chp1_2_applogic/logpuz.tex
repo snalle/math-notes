@@ -1,0 +1,138 @@
+\begin{tcolorbox}[title=Example 1: King's Daughter Treasure Logic Puzzle (1/2)]
+\textbf{Puzzle:}  
+\begin{itemize}
+    \item As a reward for saving his daughter from pirates, the King has given you the opportunity to win
+a treasure hidden inside one of three trunks. 
+    \item The two trunks that do not hold the treasure are
+empty. 
+    \item To win, you must select the correct trunk. \item Trunks 1 and 2 are each inscribed with the
+message “\textit{This trunk is empty,}” and Trunk 3 is inscribed with the message “\textit{The treasure is in
+Trunk 2.}” 
+    \item The Queen, who never lies, tells you that only one of these inscriptions is true, while
+the other two are wrong. 
+    \item Which trunk should you select to win?
+\end{itemize}{}
+
+\textbf{Strategy:}  
+Let $p_i$ be the proposition that the treasure is in Trunk $i$, for $i = 1, 2, 3$. To translate into
+propositional logic the Queen’s statement that exactly one of the inscriptions is true, we observe
+that the inscriptions on Trunk 1, Trunk 2, and Trunk 3, are:
+\begin{center}
+$\neg p_1 \ \ \  \text{(Not in Trunk 1)} $ \\
+$\neg p_2 \ \ \  \text{(Not in Trunk 2)} $ \\
+$p_2 \ \ \  \text{(In Trunk 2)} $ \\
+\end{center}
+Then we have to construct the 3 different scenarios:
+\begin{itemize}
+    \item Inscription in Trunk 1 is correct:
+    \begin{center}
+$\neg p_1 \land \neg(\neg p_2) \land \neg p_2$    
+\end{center}
+   \item Inscription in Trunk 2 is correct:
+    \begin{center}
+$\neg (\neg p_1) \land \neg p_2 \land \neg p_2$    
+\end{center}
+    \item Inscription in Trunk 3 is correct:
+    \begin{center}
+$\neg (\neg p_1) \land \neg (\neg p_2) \land p_2$    
+\end{center}
+\end{itemize}
+Only one scenario can be correct, so we have to combine them with the disjunction operator $\lor$ and we get:
+\begin{center}
+$\left( \neg p_1 \land \neg(\neg p_2) \land \neg p_2 \right) \lor \left(\neg (\neg p_1) \land \neg p_2 \land \neg p_2 \right) \lor \left(\neg (\neg p_1) \land \neg (\neg p_2) \land p_2 \right) $    
+\end{center}
+\textbf{Reducing and simplifying (1/2):}
+\begin{center}
+$\neg (\neg p_i) = p_i $    
+\end{center}
+\begin{center}
+$\left( \neg p_1 \land p_2 \land \neg p_2 \right) \lor \left(p_1 \land \neg p_2 \land \neg p_2 \right) \lor \left(p_1 \land  p_2 \land p_2 \right) $    
+\end{center}
+\begin{center}
+$\left(p_1 \land \neg p_2  \right) \lor \left(p_1 \land  p_2\right) $    
+\end{center}
+Now using distributive law: $p_1 \land (\neg p_2 \lor p_2) $ 
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example 1: King's Daughter Treasure Logic Puzzle (2/2)]
+\textbf{Reducing and simplying (2/2):}  
+\begin{center}
+$\left(p_1 \land \neg p_2  \right) \lor \left(p_1 \land  p_2\right) = p_1 \land (\neg p_2 \lor p_2) $    
+\end{center}
+But we know that it has to be true that either $\neg p_2$ or $p_2$ and we can denote this as
+\begin{center}
+$\neg p_2 \lor p_2 = \mathbf{T}$   
+\end{center}
+This gives
+\begin{center}
+$p_1 \land (\neg p_2 \lor p_2) = p_1 \land \mathbf{T}$ 
+\end{center}
+But this is equivalent to
+\begin{center}
+$ p_1 \land \mathbf{T} = p_1$ 
+\end{center}
+\textbf{Conclusion:} \\
+So the treasure is in Trunk 1 (that is, $p_1$ is true), and $p_2$ and $p_3$ are false; and the inscription on Trunk 2 is the only true one.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 2: Raymond Smullyan´s Knights and Knaves]
+\textbf{Puzzle:}  
+\begin{itemize}
+    \item In [Sm78] Smullyan posed many puzzles about an island that has two kinds of inhabitants,
+knights, who always tell the truth, and their opposites, knaves, who always lie.
+    \item You encounter two people A and B.
+    \item What are A and B if A says “\textit{B is a knight}” and B says “T\textit{he two of us are
+opposite types”?} 
+\end{itemize}{}
+
+\textbf{Strategy:}  
+Let $p$ and $q$ be the statements that A is a knight and B is a knight, respectively, so that
+\begin{center}
+$\neg p \ \ \ \text{(A is a knave)} $ \\
+$\neg q \ \ \ \text{(B is a knave)}$
+\end{center}
+Then we have to construct the 2 different scenarios:
+\begin{itemize}
+    \item \textbf{A is a knight and tells the truth:}\\
+    Then $p$ is True, and B is also a knight ($q$ is True) and tells the truth. \\ But that means the statement $B$ says also has to be true and this cannot be, since they are the same type. So this scenario is impossible and both A and B can´t be knights
+    \item \textbf{A is a knave and lies:} \\
+    Then A lies about B being a knight. This means that B also must be a knave. This also works when looking at B´s statement, because B also lies that the are different types. 
+\end{itemize}
+\textbf{Conclusion:} \\
+We can conclude that both A and B are
+knaves.
+ 
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 3: Muddy children puzzle]
+\textbf{Puzzle:}  
+\begin{itemize}
+    \item A father tells his two children, a boy and a girl, to play in their backyard without getting dirty. However, while playing, both children get mud on their foreheads
+    \item When the children stop playing,
+the father says “A\textit{t least one of you has a muddy forehead,}” and then asks the children to
+answer “\textit{Yes}” or “\textit{No}” to the question: \textit{“Do you know whether you have a muddy forehead?}”
+    \item The father asks this question twice. 
+    \item What will the children answer each time this question is asked, assuming that a child can see whether his or her sibling has a muddy forehead, but cannot see his or her own forehead?
+    \item Assume that both children are honest and that the children answer each question simultaneously.
+\end{itemize}
+
+\textbf{Strategy:}  
+Let $s$ be the statement that the son has a muddy forehead and let $d$ be the statement that
+the daughter has a muddy forehead. 
+\\ \\ 
+When the father says that at least one of the two children
+has a muddy forehead, he is stating that the disjunction is true
+\begin{center}
+$s \lor d$
+\end{center}
+Then we have to construct the 2 different times the father asks:
+\begin{itemize}
+    \item \textbf{Round 1:}\\
+    We assum that each children tells the true and at the same time, so they would both answer "\textit{No}", since the son only knows $d$ is true and daughter only knows $s$ is true. 
+    \item \textbf{Round 2:}\\
+    Each child now knows that they themselves must have mud on their forehead, since they both answered "\textit{No}" on the 1. question and the father stated that at least one of them has a muddy forehead. \\ \\ They are both going to answer "\textit{Yes}" this time.
+\end{itemize}
+\textbf{Conclusion:} \\
+First time the father asks, both children answer "\textit{No}". \\ Second time the father asks, both children answer "\textit{Yes}".
+ 
+\end{tcolorbox}
+

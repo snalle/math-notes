@@ -1,0 +1,59 @@
+\begin{tcolorbox}[title=Example 1: Translating from English to a Logical Expression]
+\textbf{Statement:}  
+\begin{center}
+\textit{"You can access the Internet from campus only if you are a computer science major or you are not a freshman."}
+\end{center}
+
+\textbf{Strategy:}  
+Rather than representing the entire sentence as a single propositional variable (e.g. $p$), which would not help in understanding or reasoning, we break it into smaller propositions and connect them using logical operators.
+
+\vspace{1em}
+
+\textbf{Let:}
+\begin{itemize}
+  \item $a$: You can access the Internet from campus
+  \item $c$: You are a computer science major
+  \item $f$: You are a freshman
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Translation:}
+\[
+a \rightarrow (c \lor \neg f)
+\]
+\end{tcolorbox}
+\begin{tcolorbox}[title=Example 2: Translating from English to a Logical Expression]
+\textbf{Statement:}  
+\begin{center}
+\textit{"You cannot ride the roller coaster if you are under 4 feet tall unless you are older than 16
+years old"}
+\end{center}
+
+\textbf{Strategy:}  
+Same as previous Example 1. \\ \\
+\textbf{Let:}
+\begin{itemize}
+  \item $q$: You can ride the roller coaster
+  \item $r$: You are under 4 feet tall
+  \item $s$: You are older than 16 years old
+\end{itemize}
+
+\vspace{0.5em}
+
+\textbf{Translation:}
+\[
+(r \land \neg s) \rightarrow \neg q
+\]
+\textbf{Explanation:}  \\
+The sentence contains an exception with "unless", which in logic means "if not".  \\
+So "\textit{unless you are older than 16}" is logically equivalent to "\textit{if you are not older than 16}", or $\neg s$. \\
+Thus, the phrase becomes:  
+"\textit{If you are under 4 feet tall and not older than 16, then you cannot ride the roller coaster.}"
+That is:
+\[
+(r \land \neg s) \rightarrow \neg q
+\]
+
+\end{tcolorbox}
+
