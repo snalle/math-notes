@@ -1,5 +1,5 @@
 
-# Chapter 1: The Foundations – Logic and Proofs
+# Chapter 1: The Foundations – Logic and Proofs (pg. 1-113)
 
 This chapter introduces the essential building blocks of discrete mathematics: logic, propositional reasoning, and formal proof techniques. It serves as the foundation for understanding how to rigorously analyze and construct arguments, which is crucial for both mathematics and computer science.
 
