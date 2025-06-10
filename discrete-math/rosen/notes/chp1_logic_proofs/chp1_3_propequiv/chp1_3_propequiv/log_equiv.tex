@@ -1,0 +1,306 @@
+\vspace{5pt}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: Logically Equivalent]
+The compound propositions $p$ and $q$ are called \textbf{logically equivalent} if 
+\begin{center}
+$p\leftrightarrow q$ is a tautology
+\end{center}
+The notation $p\equiv q $ denotes that $p$ and $q$ are logically equivalent.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+The symbol $\equiv$ is not a logical connective, and $p\equiv q$ is not a compound proposition
+but rather is the statement that $p\leftrightarrow q$ is a tautology. The symbol $\Leftrightarrow$ is sometimes used instead
+of $\equiv$ to denote logical equivalence.
+\end{tcolorbox}
+\tcbset{colback=gray!5, colframe=black!70, boxrule=0.5pt, arc=2pt, left=6pt, right=6pt, top=4pt, bottom=4pt}
+\begin{tcolorbox}[title=Definition: De Morgan’s Laws]
+A pair of transformation rules, that state:
+\begin{center}
+$\neg (p\land q) \equiv \neg p \lor \neg q$ \\
+$\neg (p\lor q) \equiv \neg p \land \neg q$
+\end{center}
+
+They can also be expressed as:
+
+\begin{center}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{3cm}  % centered vertically + horizontally
+    |>{\centering\arraybackslash}m{2.5cm}  % centered vertically + horizontally
+    |m{3.5cm}  %  column, vertically centered
+    |m{3.5cm}|}  %  column, vertically centered
+\hline
+\rowcolor{gray!20}
+\textbf{Logic} & \textbf{Boolean} & \textbf{English (simple)} & \textbf{English (formal)} \\
+\hline
+$\neg (p\land q) \equiv \neg p \lor \neg q$ & 
+$\overline{p \land q} = \overline{p} \lor \overline{q}$  & The negation of "A and B" is the same as "not A or not B" & The complement of the union of two sets is the same as the intersection of their complements \\
+\hline
+$\neg (p\lor q) \equiv \neg p \land \neg q$ & $\overline{p \lor q} = \overline{p} \land \overline{q}$ & The negation of "A or B" is the same as "not A and not B" & The complement of the intersection of two sets is the same as the union of their complements\\
+\hline  
+\end{tabular}
+\end{center}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 1: Show 2. De Morgan´s Law with truth table]
+\textbf{Exercise:}  
+\begin{center}
+Show that $\neg (p\lor q) $ and $\neg p \land \neg q$  are logically equivalent (using truth table) 
+\end{center}
+\textbf{Truth table:}
+\begin{center}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c|c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $p \lor q$ & $\neg (p \lor q)$ & $\neg p$ & $\neg q$ & $\neg p \land \neg q$ \\
+\hline
+T & T & T & F & F & F & F \\
+T & F & T & F & F & T & F \\
+F & T & T & F & T & F & F \\
+F & F & F & T & T & T & T \\
+\hline
+\end{tabular}    
+\end{center}
+
+\textbf{Conclusion:}  
+Because the truth values of the compound propositions $\neg (p\lor q) $ and $\neg p \land \neg q$ agree for all possible combinations
+of the truth values of $p$ and $q$, it follows that $\neg (p\lor q) \leftrightarrow \neg p \land \neg q$  is a tautology and
+that these compound propositions are logically equivalent.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 2: Show conditional-disjunction equivalence]
+\textbf{Exercise:}  
+\begin{center}
+Show that $p\rightarrow q $ and $\neg p \lor q$  are logically equivalent (using truth table) 
+\end{center}
+\textbf{Truth table:}
+\begin{center}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c!{\vrule width 1.5pt}c|c|c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $\neg p$ & $\neg p \lor q$ & $p \rightarrow q$ \\
+\hline
+T & T & T & F & F   \\
+T & F & T & F & F   \\
+F & T & T & F & T   \\
+F & F & F & T & T   \\
+\hline
+\end{tabular}    
+\end{center}
+
+\textbf{Conclusion:}  
+Because the truth values of the compound propositions $\neg (p\lor q) $ and $\neg p \land \neg q$ agree for all possible combinations
+of the truth values of $p$ and $q$, it follows that $\neg (p\lor q) \leftrightarrow \neg p \land \neg q$  is a tautology and
+that these compound propositions are logically equivalent.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+If we establish a logical equivalence of two compound propositions involving three
+different propositional variables $p$, $q$, and $r$. To use a truth table to establish such a logical
+equivalence, we need eight rows, one for each possible combination of truth values of these
+three variables. We symbolically represent these combinations by listing the truth values of $p$, $q$, and $r$, respectively.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+These eight combinations of truth values are \textbf{TTT}, \textbf{TTF}, \textbf{TFT}, \textbf{TFF}, \textbf{FTT},
+\textbf{FTF}, \textbf{FFT}, and \textbf{FFF}; we use this order when we display the rows of the truth table. Note that we
+need to double the number of rows in the truth tableswe use to show that compound propositions
+are equivalent for each additional propositional variable, so that 16 rows are needed to establish
+the logical equivalence of two compound propositions involving four propositional variables,
+and so on.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 4]
+In general, $2^n$ rows are required if a compound proposition involves n propositional
+variables. Because of the rapid growth of $2^n$, more efficient ways are needed to establish logical
+equivalences, such as by using ones we already know
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 3: Distributive law
+of disjunction over conjunction]
+\textbf{Exercise:}  
+\begin{center}
+Show that $p\lor (q\land r) $ and $(p\lor q) \land (p \lor r)$  are logically equivalent (using truth table) 
+\end{center}
+\textbf{Truth table:}
+\begin{center}
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|c|c|c!{\vrule width 1.5pt}c|c!{\vrule width 1.5pt}c|c|c|}
+\hline
+\rowcolor{gray!20}
+$p$ & $q$ & $r$ & $q \land r$ & $p \lor (q \land r)$ & $p \lor q$ & $p \lor r$ & $(p\lor q) \land (p\lor r)$ \\
+\hline
+T & T & T & T & T & T & T & T \\
+\hline
+T & T & F & F & T & T & T & T \\
+\hline
+T & F & T & F & T & T & T & T \\
+\hline
+T & F & F & F & T & T & T & T \\
+\hline
+F & T & T & T & T & T & T & T \\
+\hline
+F & T & F & F & F & T & F & F \\
+\hline
+F & F & T & F & F & T & F & F
+\\
+\hline
+F & F & F & F & F & F & F & F \\ \hline
+\end{tabular}    
+\end{center}
+\end{tcolorbox}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3} % Adjust vertical spacing
+\rowcolors{2}{white}{gray!10} % Alternate: white, gray
+\caption*{\textbf{Logical Equivalences: Logic, Programming, and Law Names}}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{5cm}
+    |>{\centering\arraybackslash}m{7cm}
+    |>{\centering\arraybackslash}m{4cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Equivalence (Logic)} & \textbf{Equivalence (Programming)} &\textbf{Name} \\
+\hline
+$p \lor \mathbf{F} \equiv p$ & p || false == p & Identity law (OR) \\
+$p \land \mathbf{T} \equiv p$ & p \&\& true == p &Identity law (AND) \\
+\hline
+$p \lor \mathbf{T} \equiv \mathbf{T}$ & p || true == true & Domination law (OR) \\
+$p \land \mathbf{F} \equiv \mathbf{F}$ & p \&\& false == false &  Domination law (AND) \\
+\hline
+$p \lor p \equiv p$ & p || p == p &  Idempotent law (OR) \\
+$p \land p \equiv p$ & p \&\& p == p & Idempotent law (AND) \\
+\hline
+$\neg(\neg p) \equiv p$ & !!p == p & Double negation law \\
+\hline
+$p \lor q \equiv q \lor p$ & p || q == q || p & Commutative law (OR) \\
+$p \land q \equiv q \land p$ & p \&\& q == q \&\& p & Commutative law (AND) \\
+\hline
+$(p \lor q) \lor r \equiv p \lor (q \lor r)$ & (p || q) || r == p || (q || r) & Associative law (OR) \\
+$(p \land q) \land r \equiv p \land (q \land r)$ & (p \&\& q) \&\& r == p \&\& (q \&\& r) & Associative law (AND)  \\
+\hline
+$p \lor (q \land r) \equiv (p \lor q) \land (p \lor r)$ & p || (q \&\& r) == (p || q) \&\& (p || r)  & Distributive law (OR over AND) \\
+$p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$ & p \&\& (q || r) == (p \&\& q) || (p \&\& r) & Distributive law (AND over OR) \\
+\hline
+$\neg(p \land q) \equiv \neg p \lor \neg q$ & !(p \&\& q) == !p || !q &  De Morgan’s law (NOT AND $\rightarrow $ OR) \\
+$\neg(p \lor q) \equiv \neg p \land \neg q$ & !(p || q) == !p \&\& !q & De Morgan’s law (NOT OR $\rightarrow$ AND) \\
+\hline
+$p \lor (p \land q) \equiv p$ & p || (p \&\& q) == p & Absorption law (OR) \\
+$p \land (p \lor q) \equiv p$ & p \&\& (p || q) == p & Absorption law (AND) \\
+\hline
+$p \lor \neg p \equiv \mathbf{T}$ & p || !p == true   & Negation law (OR) \\
+$p \land \neg p \equiv \mathbf{F}$ & p \&\& !p == false & Negation law (AND) \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3} % Adjust vertical spacing
+\rowcolors{2}{white}{gray!10} % Alternate: white, gray
+\caption*{\textbf{Logical Equivalences Involving Conditional Statements}}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{5cm}
+    |>{\centering\arraybackslash}m{7cm}
+    |>{\centering\arraybackslash}m{4cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Equivalence (Logic)} & \textbf{Equivalence (Programming)} &\textbf{Name} \\
+\hline
+$p \rightarrow q \equiv \neg p \lor q$ & !p || q & Conditional equivalence \\
+\hline
+$p \rightarrow q \equiv \neg q \rightarrow \neg p$ & !p || q == !q || !p & Contrapositive equivalence \\
+\hline
+$p \lor q \equiv \neg p \rightarrow q$ & !p || q & Implication from disjunction \\
+\hline
+$p \land q \equiv \neg(p \rightarrow \neg q)$ & !(p => !q) or !( !p || !q ) & Conjunction via implication \\
+\hline
+$\neg (p \rightarrow q) \equiv p \land \neg q$ & !( !p || q ) == p \&\& !q & Negation of implication \\
+\hline
+$(p\rightarrow q) \land (p \rightarrow r) \equiv p \rightarrow (q \land r)$ & (!p || q) \&\& (!p || r) == !p || (q \&\& r) & Distributive implication (AND) \\
+\hline
+$(p\rightarrow r) \land (q \rightarrow r) \equiv (p \lor q) \rightarrow r$ & (!p || r) \&\& (!q || r) == !(p || q) || r & Factoring implication (common result) \\
+\hline
+$(p\rightarrow q) \lor (p \rightarrow r) \equiv p \rightarrow (q \lor r)$ & (!p || q) || (!p || r) == !p || (q || r) & Distributive implication (OR) \\
+\hline
+$(p\rightarrow r) \lor (q \rightarrow r) \equiv (p \land q) \rightarrow r$ & (!p || r) || (!q || r) == !(p \&\& q) || r & Factoring implication (common antecedent) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3} % Adjust vertical spacing
+\rowcolors{2}{white}{gray!10} % Alternate: white, gray
+\caption*{\textbf{Logical
+Equivalences Involving
+Biconditional Statements}}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{5cm}
+    |>{\centering\arraybackslash}m{5cm}
+    |>{\centering\arraybackslash}m{6cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Equivalence (Logic)} & \textbf{Equivalence (Programming)} &\textbf{Name} \\
+\hline
+$p \leftrightarrow q \equiv (p \rightarrow q) \land (q \rightarrow p)$ &  (!p || q) \&\& (!q || p) & Biconditional as conjunction of implications   \\
+\hline
+$p \leftrightarrow q \equiv \neg q \leftrightarrow \neg p$ & !q == !p & Invariance under negation (logical symmetry)  \\
+\hline
+$p \leftrightarrow q \equiv (p \land q) \lor (\neg p \land \neg q)$ & (p \&\& q) || (!p \&\& !q) & Biconditional as agreement in truth value  \\
+\hline
+$\neg (p \leftrightarrow q) \equiv p \leftrightarrow \neg q$ & !(p == q) == (p == !q) & Negation of biconditional / XOR form \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 5]
+The associative law for disjunction shows that the expression $p \lor q \lor r$ is well defined, in
+the sense that it does not matter whether we first take the disjunction of $p$ with $q$ and then
+the disjunction of $p\lor q$ with $r$, or if we first take the disjunction of $q$ and $r$ and then take the
+disjunction of $p$ with $p \lor r$.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 6]
+Similarly, the expression $p \land q \land r$ is well defined. By extending
+this reasoning, it follows that $p_1 \lor p_2  \lor \ldots \lor p_n$ and $p_1 \land p_2 \land \ldots \land p_n$ are well defined whenever
+$p_1, p_2,\ldots, p_n$ are propositions.
+\end{tcolorbox}
+
+\newpage
+\begin{table}[h!]
+\centering
+\renewcommand{\arraystretch}{1.3} % Adjust vertical spacing
+\rowcolors{2}{white}{gray!10} % Alternate: white, gray
+\caption*{\textbf{Extended Version of De Morgan’s Laws}}
+\begin{tabular}{|
+    >{\centering\arraybackslash}m{7cm}
+    |>{\centering\arraybackslash}m{4.5cm}
+    |>{\centering\arraybackslash}m{5cm}|}
+\hline
+\rowcolor{gray!20}
+\textbf{Explicit Form} & \textbf{Compact Form} & \textbf{Name} \\
+\hline
+$\neg(p_1 \lor p_2 \lor \ldots \lor p_n) \equiv \neg p_1 \land \neg p_2 \land \ldots \land \neg p_n$ 
+& $ \neg \left(\bigvee_{j=1}^n p_j \right) \equiv \bigwedge_{j=1}^n \neg p_j $ 
+& Generalized De Morgan’s Law (OR to AND) \\
+\hline
+$\neg(p_1 \land p_2 \land \ldots \land p_n) \equiv \neg p_1 \lor \neg p_2 \lor \ldots \lor \neg p_n$ 
+& $ \neg \left(\bigwedge_{j=1}^n p_j \right) \equiv \bigvee_{j=1}^n \neg p_j $ 
+& Generalized De Morgan’s Law (AND to OR) \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 7]
+A truth table with $2^n$ rows is needed to prove the equivalence of two compound propositions
+in $n$ variables. Note that the number of rows doubles for each additional propositional variable
+added
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 8]
+Because $2^n$
+grows extremely rapidly as $n$ increases , the use of truth tables to establish
+equivalences becomes impractical as the number of variables grows. It is quicker to use other
+methods, such as employing logical equivalences that we already know.
+\end{tcolorbox}

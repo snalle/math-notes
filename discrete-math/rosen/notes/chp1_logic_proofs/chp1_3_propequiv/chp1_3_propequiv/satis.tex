@@ -1,0 +1,85 @@
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} \textbf{Satisfiable}. A compound proposition is satisfiable if there is an assignment of truth values to its variables
+that makes it true (that is, when it is a tautology or a contingency).
+  }
+}
+\end{center}
+\begin{center}
+\noindent\fbox{
+  \parbox{0.95\linewidth}{
+    \textbf{Definition:} \textbf{Unsatisfiable}. 
+When no such assignments
+exists, that is, when the compound proposition is false for all assignments of truth values to
+its variables, the compound proposition is unsatisfiable.
+  }
+}
+\end{center}
+
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+Note that a compound proposition is
+unsatisfiable if and only if its negation is true for all assignments of truth values to the variables,
+that is, if and only if its negation is a tautology.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 2]
+When we find a particular assignment of truth values that makes a compound proposition
+true,we have shown that it is satisfiable; such an assignment is called a \textbf{solution} of this particular
+satisfiability problem.
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 3]
+However, to show that a compound proposition is unsatisfiable, we need
+to show that every assignment of truth values to its variables makes it false. Although we can
+always use a truth table to determine whether a compound proposition is satisfiable, it is often
+more efficient not to.
+\end{tcolorbox}
+
+\newpage
+\begin{tcolorbox}[title=Example 1: Satisfiable compound propositions]
+\textbf{Exercise:}  
+\\ Determine whether each of the compound propositions is satisfiable
+\begin{center}
+$(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$ \\ 
+$(p\lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$
+\\
+$(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \land (p \lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$
+\end{center}
+
+\textbf{Strategy:}  \\
+Instead of using a truth table to solve this problem, we will reason about truth values. \\ \\
+\textbf{First compound proposition:} \\
+We have $(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$ is true when the three variables $p$, $q$, and $r$ have the same truth value.
+Hence, it is satisfiable as there is at least
+one assignment of truth values for $p$, $q$, and $r$ that makes it true.
+\\ \\
+\textbf{Second compound proposition:} \\
+Similarly, note that $(p\lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$ is true when at least one of $p$, $q$, and $r$ is true and at least one is false. Hence, $(p\lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$ is satisfiable, as there is at least
+one assignment of truth values for $p$, $q$, and $r$ that makes it true. \\ \\
+\textbf{Third compound proposition:} \\
+Finally, note that for $(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \land (p \lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$ to be true:
+\\ \\ Both: 
+\begin{center}
+$(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$    
+\end{center}
+and 
+\begin{center}
+ $(p \lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$   
+\end{center}
+must both be true. 
+\\ For the first to be true, $(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p)$ ,  the three variables must have the same truth values. \\
+For the second to be true, $(p \lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$ at least one of the three variables must be true and at least one must be
+false. \\ \\
+However, these conditions are contradictory. From these observations we conclude
+that no assignment of truth values to $p$, $q$, and $r$ makes $(p\lor \neg q) \land (q \lor \neg r) \land (r \lor \neg p) \land (p \lor q \lor r) \land (\neg p \lor \neg q \lor \neg r)$ true. Hence, it is unsatisfiable.
+\end{tcolorbox}
+
+
+
+
+
+
+
+
+
+
+¨.

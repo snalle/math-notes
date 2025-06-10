@@ -1,0 +1,67 @@
+\begin{tcolorbox}[colback=white, colframe=gray!60, title=Remark 1]
+We use the fact that if $p$ and $q$ are logically equivalent and $q$ and $r$ are logically equivalent, then $p$ and $r$ are
+logically equivalent (See Exercise 60)
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 1: Construct new logical equivalence]
+\textbf{Exercise:}  
+\\ Show the logical equivalence: 
+\begin{center}
+$\neg (p\rightarrow q) \equiv p \land \neg q$  
+\end{center}
+
+\textbf{Strategy:}  \\
+We will establish this equivalence by developing a
+series of logical equivalences, using one of the equivalences from our previous tables, starting with
+$\neg (p\rightarrow q) $ and ending with $p \land \neg q$   \\ \\
+\textbf{Using logical equivalences:}   
+\begin{align*}
+\neg (p\rightarrow q) &\equiv \neg (\neg p \lor q)  \ \ \ (\textbf{conditional-disjunction equivalence, pg. 3, example 2}) \\
+&\equiv \neg (\neg p) \land \neg q \ \ \ \textbf{(second De Morgan law, pg. 4)} \\
+&\equiv p\land \neg q \ \ \ \textbf{(double negation law, pg. 4)} \\
+\end{align*}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 2: Construct new logical equivalence]
+\textbf{Exercise:}  
+\\ Show the logical equivalence: 
+\begin{center}
+$\neg (p \lor (\neg p\land q)) \equiv \neg p \land \neg q$
+\end{center}
+
+\textbf{Strategy:}  \\
+We will establish this equivalence by developing a
+series of logical equivalences, using one of the equivalences from our previous tables, starting with
+$\neg (p \lor (\neg p\land q))$ and ending with $\neg p \land \neg q$ \\ \\
+\textbf{Using logical equivalences:}   
+\begin{align*}
+\neg (p \lor (\neg p\land q)) &\equiv \neg p \land \neg (\neg p\land q) \ \ \ \textbf{(second De Morgan law, pg. 4)} \\
+&\equiv \neg p \land (\neg (\neg p)\lor  \neg q)) \ \ \ \textbf{(first De Morgan law, pg. 4)} \\
+&\equiv\neg p \land (p \lor \neg q) \ \ \ \textbf{(double negation law, pg. 4)} \\
+&\equiv (\neg p \land p) \lor (\neg p \land \neg q) \ \ \ \textbf{(distributive law (AND over OR), pg. 4)} \\
+&\equiv \mathbf{F} \lor (\neg p \land \neg q) \ \ \ \textbf{(negation law (AND), pg. 4)} \\
+&\equiv (\neg p \land \neg q) \lor \mathbf{F}  \ \ \ \textbf{(commutative law (OR), pg. 4)} \\
+&\equiv \neg p \land \neg q  \ \ \ \textbf{(identity law (OR), pg. 4)} \\
+\end{align*}
+\end{tcolorbox}
+
+\begin{tcolorbox}[title=Example 3: Construct tautology]
+\textbf{Exercise:}  
+\\ Show the tautology: 
+\begin{center}
+$(p\land q) \rightarrow (p\lor q)$
+\end{center}
+
+\textbf{Strategy:}  \\
+To show that this statement is a tautology, we will use logical equivalences to demonstrate
+that it is logically equivalent to \textbf{T}. \\ \\
+\textbf{Using logical equivalences:}   
+\begin{align*}
+(p\land q) \rightarrow (p\lor q) &\equiv \neg (p \land q) \lor (p \lor q) \ \  (\textbf{conditional-disjunction equivalence, pg. 3, ex. 2}) \\
+&\equiv (\neg p \lor   \neg q) \lor (p \lor q) \ \ \ \textbf{(first De Morgan law, pg. 4)} \\
+&\equiv (\neg p \lor p) \lor (\neg q \lor q)
+\ \ \ \textbf{(associative + commutative (OR) laws, pg. 4)} \\
+&\equiv \mathbf{T} \lor \mathbf{T} \ \ \ \textbf{(tautology, pg. 1, ex. 1 + commutative (OR) law, pg. 4) } \\
+&\equiv \mathbf{T} \ \ \ \textbf{(domination law, pg. 4,) } 
+\end{align*}
+\end{tcolorbox}
